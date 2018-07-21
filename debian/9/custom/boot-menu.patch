@@ -1,0 +1,26 @@
+*** orig/isolinux/isolinux.cfg	2016-10-12 04:45:19.000000000 +0200
+--- custom/isolinux.cfg	2017-02-12 00:36:09.201190417 +0100
+***************
+*** 4,7 ****
+  include menu.cfg
+  default vesamenu.c32
+  prompt 0
+! timeout 0
+--- 4,7 ----
+  include menu.cfg
+  default vesamenu.c32
+  prompt 0
+! timeout 100
+*** orig/boot/grub/grub.cfg	Fri Jul 20 22:38:09 2018
+--- custom/boot/grub/grub.cfg	Fri Jul 20 22:37:39 2018
+***************
+*** 20,25 ****
+--- 20,27 ----
+  insmod play
+  play 960 440 1 0 4 440 1
+  set theme=/boot/grub/theme/1
++ set default=1
++ set timeout=10
+  menuentry --hotkey=g 'Graphical install' {
+      set background_color=black
+      linux    /install.amd/vmlinuz vga=788 --- quiet 
