@@ -18,9 +18,8 @@
 --- 20,27 ----
   insmod play
   play 960 440 1 0 4 440 1
-  set theme=/boot/grub/theme/1
-+ set default=1
++ set default=0
 + set timeout=10
-  menuentry --hotkey=g 'Graphical install' {
+  menuentry 'Install' {
       set background_color=black
-      linux    /install.amd/vmlinuz vga=788 --- quiet 
+      linux    /linux vga=788 --- quiet
